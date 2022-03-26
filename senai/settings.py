@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -79,11 +80,22 @@ WSGI_APPLICATION = 'senai.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+   'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+   }
 }
+
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'd4plmqfi1sknhq',
+#        'USER': 'oqowarfciumebk',
+#        'PASSWORD': 'd83a5982eacff7fb3cfb14ddb3d6cd45913e4cdc8b49bc9d27a1acb6864c2689',
+#        'HOST': 'ec2-3-229-161-70.compute-1.amazonaws.com',
+#        'PORT': '5432',
+#    }
+# }
 
 
 # Password validation
