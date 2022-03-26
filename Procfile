@@ -1,0 +1,1 @@
+web: gunicorn senai.wsgi --log-file -
